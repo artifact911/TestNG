@@ -32,6 +32,5 @@ public class ParallelSuiteTest {
     public void testMethodOne() {
         long id = Thread.currentThread().getId();
         System.out.println("Sample test - method " + testName + ".Thread id is: " + id);
-
     }
 }
