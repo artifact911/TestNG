@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!--Параллельный запуск тестовых классов-->
+
+<suite name="Test-class Suite" parallel="classes" thread-count="2">
+    <test name="Test-class test">
+        <classes>
+            <class name="org.example.classesParallel.ParallelClassesOne">
+                <methods>
+                    <include name="testMethodOne"/>
+                    <include name="testMethodTwo"/>
+                </methods>
+            </class>
+
+            <class name="org.example.classesParallel.ParallelClassesTwo">
+                <methods>
+                    <include name="testMethodOne"/>
+                    <include name="testMethodTwo"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
